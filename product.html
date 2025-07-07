@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+
+ <header>
+   <a href="homepage.h.html" class="logo1" aria-label="Go to homepage" style=" text-decoration: none; color: inherit;">
+  <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+    <circle cx="32" cy="32" r="30" fill="#4b3b7a"/>
+    <text x="32" y="43" text-anchor="middle" font-size="32" fill="white"
+          font-family="Arial" font-weight="bold">E</text>
+  </svg>
+  ElegantStore
+</a>
+<nav id="main1-nav" aria-label="Primary navigation">
+  <a href="homepage.h.html">Home</a>
+  <a href="index.html" onclick="filterByCategory(event, 'all')">All Products</a>
+
+  
+
+  <span id="user-info"></span>
+</nav>
+
+  </header>
+
+
+  <main>
+    <section id="product-detail" class="active-section" style="padding: 2rem;">
+<div class="product-page-container" style="display: flex; gap: 2rem; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
+
+  <!-- Left: Product Image -->
+  <div class="product-image" style="flex: 0 0 400px;">
+    <img id="product-img" src="" alt="" style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px;" />
+  </div>
+
+  <!-- Right: Info -->
+  <div class="product-info" style="flex: 1 1 300px; max-width: 500px;">
+    <h1 id="product-name" style="color: #4b3b7a; font-size: 2rem; margin-bottom: 1rem;"></h1>
+    <p id="product-price" style="font-weight: bold; font-size: 1.3rem; color: #1e73be;"></p>
+    <label for="product-qty" style="display: block; margin-top: 1rem;">Quantity:</label>
+    <input type="number" id="product-qty" min="1" value="1" style="width: 70px; margin: 0.5rem 0 1rem 0;" />
+
+    <br />
+    <button onclick="addProductToCart()" class="btn">Add to Cart</button>
+  </div>
+
+</div>
+
+
+      <!-- Bottom: Description -->
+      <div style="margin-top: 3rem;">
+        <h2 style="color: #4b3b7a;">Product Description</h2>
+        <p id="product-description" style="max-width: 700px;"></p>
+      </div>
+
+      <!-- Bottom: Related Products -->
+      <div style="margin-top: 3rem;">
+        <h2 style="color: #4b3b7a;">Related Products</h2>
+        <div id="related-products" class="grid"></div>
+      </div>
+    </section>
+  </main>
+
+     <!-- Footer Start -->
+    <footer id="hehe" >
+        <div class="col">
+            <a href="#"><img class="logo" src="pnglogo.png" alt="Logo"></a>
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> New Market, Chattogram, Bangladesh</p>
+            <p><strong>Email:</strong> <a href="mailto:trininjas@gmail.com">trininjas@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+8801234567890">+880 1234 567890</a></p>
+            <p><strong>Website:</strong> <a href="https://y...content-available-to-author-only...e.com" target="_blank">yourwebsite.com</a></p>
+            <p><strong>Hours:</strong> Saturday to Thursday: 9.00am to 18.00pm</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec">
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Condition</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Account</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row1">
+                    <img src="apple.png" alt="App Store">
+                    <img src="playStore.png" alt="Google Play">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="visapic.png" alt="Payment Methods">
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 All rights reserved! Made by Niloy, Jewel & Raihan</p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+<script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const nav = document.getElementById('main-nav');
+
+  toggleButton.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+
+  // Optional: close nav when a link is clicked
+  document.querySelectorAll('#main-nav a').forEach(link => {
+    link.addEventListener('click', () => nav.classList.remove('show'));
+  });
+</script>
+
+  <script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    });
+</script>
+<script
+  <script src="products.js"></script>
+  
+  <script src="product-detail.js"></script>
+  
+  
+  
+  
+</body>
+</html>

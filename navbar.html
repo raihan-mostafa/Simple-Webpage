@@ -1,0 +1,45 @@
+ <header>
+   <a href="homepage.h.html" class="logo1" aria-label="Go to homepage" style=" text-decoration: none; color: inherit;">
+  <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+    <circle cx="32" cy="32" r="30" fill="#4b3b7a"/>
+    <text x="32" y="43" text-anchor="middle" font-size="32" fill="white"
+          font-family="Arial" font-weight="bold">E</text>
+  </svg>
+  ElegantStore
+</a>
+
+    <div id="search-bar">
+      <input 
+        type="search" 
+        id="search-input" 
+        aria-label="Search products" 
+        placeholder="Search products..." 
+        oninput="filterProducts()" 
+        autocomplete="off"
+      />
+    </div>
+
+    <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0" onclick="toggleMenu()" onkeypress="if(event.key==='Enter') toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+<nav id="main-nav" aria-label="Primary navigation">
+  <a href="homepage.h.html">Home</a>
+  <a href="#categories" onclick="filterByCategory(event, 'all')">All Products</a>
+  <a href="#categories" onclick="filterByCategory(event, 'Fashion')">Fashion</a>
+  <a href="#categories" onclick="filterByCategory(event, 'Home & Living')">Home & Living</a>
+  <a href="#categories" onclick="filterByCategory(event, 'Electronics')">Electronics</a>
+  <a href="#categories" onclick="filterByCategory(event, 'Beauty')">Beauty</a>
+
+  <a href="#cart" onclick="showSection('cart')">Cart (<span id="cart-count">0</span>)</a>
+  <a href="contuct.html">Contact</a>
+
+  <span id="auth-links">
+    <a href="#register" onclick="showSection('register')">Register &nbsp;</a>
+    <a href="#login" onclick="showSection('login')">Login</a>
+  </span>
+
+  <span id="user-info"></span>
+</nav>
+
+  </header>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://c...content-available-to-author-only...e.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://f...content-available-to-author-only...s.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    header {
+  background-color: #1e1e1e;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+nav a {
+  color: #9cc9ff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+nav a:hover, nav a:focus {
+  color: #d2b4ff;
+  outline: none;
+}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f1f5f9;
+      color: #333;
+    }
+
+    .hero {
+      background-image: url("image.png");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      min-height: 400px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .contact-info, .map {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 12px;
+      color: #00695c;
+      font-size: 20px;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-info li {
+      margin-bottom: 12px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+      color: #00897b;
+      font-size: 16px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 8px;
+      min-height: 260px;
+    }
+
+    .form-section {
+      padding: 30px 15px;
+      background: #fff;
+      max-width: 700px;
+      margin: 25px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+
+    .form-section h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: #00695c;
+    }
+
+    .form-section p {
+      text-align: center;
+      max-width: 480px;
+      margin: 0 auto 20px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    label {
+      font-size: 14px;
+      margin-bottom: 4px;
+      color: #444;
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00897b;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      width: fit-content;
+      padding: 10px 20px;
+      background-color: #00695c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      align-self: center;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #00897b;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+        padding: 25px 15px;
+      }
+
+      .form-section {
+        padding: 25px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav id="main-nav" aria-label="Primary navigation">
+  <a href="index.html">Home</a>
+
+</nav>
+  </header>
+  <section class="hero"></section>
+
+  <section class="contact-section">
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><strong>Visit one of our agency locations or contact us today</strong></p>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> New Market, Chattogram, Bangladesh</li>
+        <li><i class="fas fa-envelope"></i> trininjas@gmail.com</li>
+        <li><i class="fas fa-phone"></i> +880 1234 567890</li>
+        <li><i class="fas fa-globe"></i> https://y...content-available-to-author-only...e.com</li>
+        <li><i class="fas fa-clock"></i> Saturday to Thursday: 9.00am to 18.00pm</li>
+      </ul>
+    </div>
+
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=New+Market,+Chattogram,+Bangladesh&output=embed"></iframe>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h3>Send Us a Message</h3>
+    <p>Have questions or feedback? Our team is here to help. Fill out the form and we’ll get back to you shortly.</p>
+    <form id="contactForm" action="#">
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+      </div>
+      <div>
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Type the subject" required />
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="3" placeholder="Write your message here..." required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for contacting us!');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
